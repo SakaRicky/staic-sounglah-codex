@@ -1,0 +1,270 @@
+:root {
+  --bg: #f8f1e6;
+  --paper: #fffaf0;
+  --orange: #df6d1f;
+  --orange-dark: #c45b14;
+  --green: #2f6a3f;
+  --brown: #4c2f1f;
+  --muted: #5f4e42;
+  --card-shadow: 0 14px 26px rgba(129, 93, 57, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", system-ui, -apple-system, sans-serif;
+  color: var(--brown);
+  background: radial-gradient(circle at top, #fff9ef 0%, var(--bg) 68%);
+}
+
+.pattern-bar {
+  height: 68px;
+  background:
+    linear-gradient(90deg, #e38122 0%, #ef922f 100%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 233, 178, 0.65) 0 10px,
+      transparent 10px 18px
+    );
+  border-bottom: 6px solid #eb9d3a;
+}
+
+.page {
+  width: min(1180px, 92vw);
+  margin: 0 auto;
+  padding: 2.2rem 0 4rem;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Baloo 2", sans-serif;
+  font-size: clamp(1.7rem, 2.2vw, 2.5rem);
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.brand-icon {
+  font-size: 1.9rem;
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.btn {
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 0.9rem 1.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(223, 109, 31, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--orange-dark);
+}
+
+.btn-outline {
+  color: var(--brown);
+  border: 2px solid rgba(110, 72, 36, 0.35);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.hero-copy h1 {
+  font-family: "Baloo 2", sans-serif;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 1.05;
+  margin: 0;
+}
+
+.accent-orange {
+  color: var(--orange);
+}
+
+.accent-green {
+  color: var(--green);
+}
+
+.hero-copy p {
+  font-size: 1.55rem;
+  max-width: 32ch;
+  margin: 1rem 0 1.6rem;
+  color: #4e433d;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.hero-art,
+.why-art {
+  margin: 0;
+  border-radius: 34px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fcefcf, #f5deaa);
+  border: 1px solid rgba(170, 122, 52, 0.2);
+}
+
+.hero-art img,
+.why-art img {
+  width: 100%;
+  display: block;
+}
+
+.features {
+  margin-top: 3.4rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  background: rgba(255, 252, 245, 0.92);
+  border-radius: 24px;
+  padding: 0.9rem 1rem 1.2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.card-image {
+  height: 170px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-1 {
+  background-image: linear-gradient(135deg, #f9c16e, #f18f39);
+}
+
+.image-2 {
+  background-image: linear-gradient(135deg, #f5a947, #df6d1f);
+}
+
+.image-3 {
+  background-image: linear-gradient(135deg, #d8eb8f, #8eb657);
+}
+
+.card h2 {
+  margin: 1rem 0 0.55rem;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #55473d;
+}
+
+.why {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.why h2 {
+  font-family: "Baloo 2", sans-serif;
+  font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+  margin: 0;
+}
+
+.why h3 {
+  margin: 0.6rem 0;
+  font-family: "Baloo 2", sans-serif;
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+  color: var(--orange);
+}
+
+.why p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #54453c;
+  max-width: 30ch;
+}
+
+@media (max-width: 1020px) {
+  .top-nav ul {
+    gap: 1.1rem;
+  }
+
+  .hero,
+  .why {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .top-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .top-nav nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .top-nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-copy p {
+    font-size: 1.15rem;
+  }
+}
